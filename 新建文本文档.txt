@@ -1,0 +1,12 @@
+61 62 01 00 04 08 03 09 09 09 00 64 63 07 08 08 03 09 09 09 00 
+AT+RST
+AT+CWMODE=1
+AT+CIPSNTPCFG=1,8,"ntpl.aliyun.com"
+AT+CWJAP="WANGCHENG","20030423"
+AT+MQTTCLIENTID=0,"public|securemode=3\,signmethod=hmacsha1|"
+
+AT+MQTTCONN=0,"k05f3W9ACXS.iot-as-mqtt.cn-shanghai.aliyuncs.com",1883,1
+AT+MQTTUSERCFG=0,1,"NULL","mydevice&k05f3W9ACXS","5C52BB48AAF5602BC8CD2C4CAA5993134FDC7FA5",0,0,""
+
+
+AT+MQTTPUB=0,"/sys/k05f3W9ACXS/mydevice/thing/event/property/post","{\"Latitude\":\"104.123456\"}",0,0
